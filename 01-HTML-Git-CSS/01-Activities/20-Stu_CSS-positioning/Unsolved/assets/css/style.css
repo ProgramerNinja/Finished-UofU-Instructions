@@ -34,6 +34,7 @@ header {
   height: 600px;
   margin: 20px auto;
   border: 15px solid black;
+  position: static;
 }
 
 /* Square 2 */
@@ -43,10 +44,12 @@ header {
 
 /* Box 2 in Square 1 */
 #relative-box-2 {
-  /* TODO: Set the position so it is centered in Square 1 */
+  margin: auto;
 }
 
 /* Box 2 in Square 2 */
 #absolute-box-2 {
-  /* TODO: Set the position so it is outside of the upper-right corner of Square 2 */
+  position: absolute;
+  right: -250px;
+  top: 0px;
 }
