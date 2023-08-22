@@ -87,25 +87,36 @@ footer {
   color: #fff;
 }
 
+li{
+  list-style-type: disc;
+}
+
+a{
+  text-decoration: none;
+}
+
 /* TODO: Add styles that will hide the resource links by default */
-
-
+.resource-list {
+  display: none;
+}
 
 /* TODO: Add styles that will display the links when the mouse hovers over the parent element */
-
+.resources:hover .resource-list{
+  display: block;
+}
 
 
 @media screen and (max-width: 768px) {
-  header, main {
-    flex-direction: column;
-  }
+    header, main {
+      flex-direction: column;
+    }
 
-  section {
-    padding-right: 0;
-  }
+    section {
+      padding-right: 0;
+    }
 
-  aside {
-    width: 100%;
-    text-align: center;
+    aside {
+      width: 100%;
+      text-align: center;
+    }
   }
-}
