@@ -113,11 +113,13 @@ select:hover, button:hover {
 }
 
 /* What does this pseudo-class mean? */
+/* When "tabbed" onto that elemen, this styling becomes active */
 .text-input:focus {
   border-right-width: 5px;
 }
 
 /* What does this pseudo-class mean? */
+/*When the place holder is still in the form, it applies this style*/
 .text-input:placeholder-shown {
   border-style: dashed;
 }
@@ -137,12 +139,14 @@ select:hover, button:hover {
 }
 
 /* What does this selector do? */
+/*When the element of Checkbox has been checked, then the label element that is directly after is given this styling*/
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
 /* What does this selector do? */
+/*When the element of Checkbox has been checked, then the label element that is directly after is give an sudo element after the label element*/
 .checkbox:checked + label::after {
   margin-left: 10px;
   font-size: 90%;

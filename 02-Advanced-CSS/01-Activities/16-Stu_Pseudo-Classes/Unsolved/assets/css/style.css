@@ -105,7 +105,6 @@ a{
   display: block;
 }
 
-
 @media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
