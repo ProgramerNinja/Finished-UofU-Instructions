@@ -1,3 +1,10 @@
+:root{
+  --dark: #13293d;
+  --light: #fff;
+  --navLinkColor: #d8a47f;
+  --textAlign: center;
+}
+
 body {
   font-size: 16px;
   display: flex;
@@ -18,25 +25,25 @@ h2 {
 
 header {
   padding: 40px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
+  text-align: var(--textAlign);
+  background: var(--dark);
+  color: var(--light);
 }
 
 nav {
   display: flex;
-  background-color: #d8a47f;
+  background-color: var(--navLinkColor);
 }
 
 nav a {
-  color: #13293d;
+  color: var(--dark);
   padding: 14px 20px;
   text-decoration: none;
-  text-align: center;
+  text-align: var(--textAlign);
 }
 
 nav a:hover {
-  background-color: #fff;
+  background-color: var(--light);
 }
 
 main {
@@ -48,15 +55,15 @@ footer {
   width: 100%;
   bottom: 0;
   padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
+  text-align: var(--textAlign);
+  background: var(--dark);
+  color: var(--light);
   margin-top: auto;
 }
 
 .products {
   flex: 1;
-  background-color: #fff;
+  background-color: var(--light);
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -80,7 +87,7 @@ footer {
 }
 
 .card > p {
-  text-align: center;
+  text-align: var(--textAlign);
 }
 
 .card > img {

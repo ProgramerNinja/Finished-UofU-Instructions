@@ -1,0 +1,44 @@
+:root{
+    --mainColor: rgb(158, 59, 153);
+    --secondaryColor: white;
+}
+
+body{
+    background-color: rgb(35, 33, 49);
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    width: 0 auto;
+    align-items: center;
+    justify-self: center;
+    font-size: xx-large;
+    color: var(--mainColor);
+
+}
+
+main{
+    display: flex;
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+p{
+    color: var(--secondaryColor);
+
+}
+
+footer{
+    color: var(--mainColor);
+}
