@@ -1,15 +1,12 @@
-// TODO: What does 'this' refer to?
-//The Window is in reference
+// This refers to the window
 console.log(this);
 
-// TODO: What does 'this' refer to?
-//This refers to the window as "this" will only relate to objects
+// This refers to the window object
 function helloThis() { 
    console.log("Inside this function, this is " + this); 
    }
 
-// TODO: What will this log? 
-//This will log 20 or this var child.age + 10
+// This refers to the child object. Will console log 20
 var child = { 
    age: 10,
    ageTenYears: function() {
@@ -17,8 +14,7 @@ var child = {
    }
 };
 
-// TODO: What will this log? 
-//This will log 5750
+// This refers to the investment object. Will log 5750
 var investor = {  
   name: "Cash Saver",
   investment: {
@@ -29,9 +25,9 @@ var investor = {
    }   
 };
 
-// TODO: After commenting, check your results!
+// Call the function helloThis to check results
 helloThis();
 
-// TODO: After commenting, check your results!
+// Call the object methods to check results
 child.ageTenYears();
 investor.investment.investmentGrowth();
