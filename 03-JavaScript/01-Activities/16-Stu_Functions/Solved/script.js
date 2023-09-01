@@ -13,13 +13,11 @@ function isEqual(x, y) {
 // Logs "They are equal in type and value"
 isEqual(10, 10);
 
-// Refer to sample functions as needed!
+// Logs "They are equal in value"
+isEqual('10', 10);
 
-// TODO: Call the isEqual function so that it logs "They are equal in value"
-isEqual(9,"9")
-
-// TODO: Rewrite isEqual as a function expression called 'isEqualTakeTwo`
-var isEqualTakeTwo = function(x, y) {
+// isEqualTakeTwo using function expression 
+var isEqualTakeTwo = function (x, y) {
   if (x === y) {
     console.log('They are equal in type and value');
   } else if (x == y) {
@@ -28,7 +26,7 @@ var isEqualTakeTwo = function(x, y) {
     console.log('They are not equal');
   }
   return;
-}
+};
 
-// TODO: Call the isEqualTakeTwo function so that it logs "They are not equal"
-isEqualTakeTwo(1,2);
+// Logs "They are not equal"
+isEqualTakeTwo(10, true);
