@@ -1,27 +1,24 @@
 var count = 0;
+//  Select increment and decrement button elements
 var incrementEl = document.querySelector("#increment");
 var decrementEl = document.querySelector("#decrement");
-var reset = document.querySelector("#reset")
 var countEl = document.querySelector("#count");
 
+// Updates count on page
 function setCounterText() {
   countEl.textContent = count;
 }
-
-// TODO: Add event listener to increment button
+// Attach event listener to increment button element
 incrementEl.addEventListener("click", function() {
   count++;
   setCounterText();
 });
-// TODO: Add event listener to decrement button 
-  decrementEl.addEventListener("click", function() {
-    if(count>0) {
+
+// Attach event listener to decrement button element
+decrementEl.addEventListener("click", function() {
+  // Action will fire if count is greater than  0
+  if (count > 0) {
     count--;
-    };
     setCounterText();
-  });
-// Resets count to 0
-reset.addEventListener("click", function() {
-  count = 0;
-  setCounterText();
+  }
 });
