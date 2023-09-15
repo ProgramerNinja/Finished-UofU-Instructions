@@ -13,6 +13,7 @@
 
 .custom-navbar {
   background-color: var(--teal);
+  font-family: 'Poppins', sans-serif;
 }
 
 .custom-navbar a {
@@ -27,6 +28,7 @@
 .hero {
   background-color: var(--lightteal);
   color: var(--teal);
+  font-family: 'Mulish', sans-serif;
 }
 
 .custom-btn {
