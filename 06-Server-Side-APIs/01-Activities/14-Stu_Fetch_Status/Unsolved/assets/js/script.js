@@ -1,4 +1,5 @@
-var badRequestUrl = 'https://api.github.com/orgs/nodejs/oreps?per_page=5';
+var badRequestUrl = 'https://api.github.com/orgs/nodejs/erpos?per_page=5';
+var requestedUrl = 'https://api.github.com/orgs/nodejs/repos?per_page=5';
 
 var responseText = document.getElementById('response-text');
 
@@ -8,7 +9,16 @@ function getApi(requestUrl) {
       // Check the console first to see the response.status
       console.log(response.status);
       // Then write the conditional based on that response.status value
-      // Make sure to display the response on the page
+      if (399 < response.status && response.status < 500) {
+        console.log("The requested URL is either bad or down")
+        // Make sure to display the response on the page
+        responseText.textContent = ("The requested URL is either bad or down");
+      } else if (199 < response.status && response.status < 300) {
+        console.log("You are good to go!")
+        // Make sure to display the response on the page
+        responseText.textContent = ("You are good to go!");
+      }
+      return response.json();
     })
     .then(function (data) {
       console.log(data);
@@ -16,3 +26,8 @@ function getApi(requestUrl) {
 }
 
 getApi(badRequestUrl);
+
+
+
+
+getApi(requestedUrl);
