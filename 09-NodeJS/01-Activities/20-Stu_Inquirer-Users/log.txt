@@ -1,0 +1,2 @@
+{"name":"jared","languages":"english and spanglish","method":"voice and in-person"}
+{"name":"Jaredy","languages":["HTML","CSS","JavaScript","Python"],"method":"call"}

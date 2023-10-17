@@ -1,0 +1,48 @@
+{
+
+"name": "Jared McMahon",
+
+"languages": [
+
+
+"HTML",
+
+
+"CSS",
+
+
+"JavaScript",
+
+
+"Python"
+
+],
+
+"method": "Email"
+}{
+
+"name": "Jared McMahon",
+
+"languages": [
+
+
+"HTML",
+
+
+"CSS",
+
+
+"JavaScript"
+
+],
+
+"method": "Telepathy"
+}{
+	"name": "Jared McMahon",
+	"languages": [
+		"HTML",
+		"CSS",
+		"JavaScript"
+	],
+	"method": "Text"
+}
