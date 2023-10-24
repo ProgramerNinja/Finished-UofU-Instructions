@@ -2,6 +2,7 @@ const Comment = require('../lib/Comment.js');
 
 describe('Comment', () => {
   // TODO: Add a comment describing this test.
+  // Makes sure that Comment was initialized correctly and thatcomment is an instance of it
   describe('Instantiate', () => {
     it('should be an instance of Comment class', () => {
       const comment = new Comment();
@@ -11,6 +12,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  //makes sure that the value of comment.authorName is the same as the initialized value and that it was initilized correctly
   describe('Initialize authorName', () => {
     it('should set authorName properly', () => {
       const authorName = 'Jane Doe';
@@ -21,6 +23,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  //makes sure that the value of comment.text is the same as the initialized value and that it was initilized correctly
   describe('Initialize text', () => {
     it('should set text properly', () => {
       const text = 'This post is super cool!';
@@ -31,6 +34,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  //makes sure that the value of comment.createdOn is the same as the initialized value and that it was initilized correctly
   describe('Initialize createdOn', () => {
     it('should set createdOn properly', () => {
       const createdOn = '12/15/2021';
@@ -45,6 +49,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  //makes sure that the value of comment.reaction is the same as the initialized value and that it was initilized correctly
   describe('Initialize reaction', () => {
     it('should set reaction properly', () => {
       const reaction = '🐶';
@@ -60,6 +65,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+// Makes sure that the input value is parsed and output correctly
   describe('printMetaData() method', () => {
     it('should print message with data', () => {
       const comment = new Comment(
