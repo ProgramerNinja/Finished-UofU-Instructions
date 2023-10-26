@@ -1,6 +1,7 @@
 const http = require('http');
 
 // TODO: What does this function return?
+// at a high level, this function creates a promise function to pull data from the passed url value and then parses/analyses it. it then returns that that either passed or failed with accompanied data.
 const asyncRequest = (url) =>
   new Promise((resolve, reject) => {
     let error;
@@ -30,9 +31,11 @@ const asyncRequest = (url) =>
         // response status code was 200.
         if (error) {
           // TODO: What the following line do?
+          //sees if there is an error and returns the value in the parenthasis
           reject(error);
         } else {
           // TODO: What does the following line do?
+          //sees that there was no errors and then returns the value inside of the parenthasis
           resolve(rawData);
         }
       });
@@ -40,6 +43,8 @@ const asyncRequest = (url) =>
 
 asyncRequest('http://numbersapi.com/random/trivia')
   // TODO: When is the callback function passed to .then() called by the promise?
+  //the .then is called when the previous function either finishes running all of it's code or is ended by a resolve(), then console logs the returned data
   .then((data) => console.log(data))
   // TODO: When is the callback function passed to .catch() called by the promise?
+  // the .catch only runs if the promise function is ended by the reject() function, then console logs the returned error
   .catch((error) => console.log(error));
