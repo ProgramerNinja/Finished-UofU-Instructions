@@ -47,9 +47,11 @@ app.post('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to add a review`);
 
   // TODO: Add a comment describing the functionality of following line of code:
+  //this line of code destructures req.body and creates a new array based off of the data from the body of the request that was recieved from the post request
   const { product, review, username } = req.body;
 
   // TODO: Add a comment describing why we would check to see if the following properties exist before entering the code block
+  //if we enter this code block before checking for all the data, we can end up with incomplete entries and errors
   if (product && review && username) {
     // Variable for the object we will save
     const newReview = {
@@ -68,9 +70,11 @@ app.post('/api/reviews', (req, res) => {
     console.log(response);
 
     // TODO: Add a comment explaining the functionality of res.json()
+    //it takes the responce from the post and returns it after parsing it with json as well as reurns a status message
     res.status(201).json(response);
   } else {
     // TODO: Add a comment describing the purpose of the else statement in this POST request.
+    //lets the user now if there was an issue at any point in entering the review
     res.status(500).json('Error in posting review');
   }
 });
