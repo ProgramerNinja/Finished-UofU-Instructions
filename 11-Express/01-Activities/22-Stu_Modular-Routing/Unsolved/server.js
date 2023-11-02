@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 
 // TODO import the routes
+const api = require('./routes/index')
 
 // Helper functions for reading and writing to the JSON file
 const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
