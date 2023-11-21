@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Gallery, Painting } = require('../models');
 // TODO: Import the custom middleware
+const withAuth = require('withAuth');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
@@ -30,11 +31,11 @@ router.get('/', async (req, res) => {
 
 // GET one gallery
 // TODO: Replace the logic below with the custom middleware
-router.get('/gallery/:id', async (req, res) => {
+router.get('/gallery/:id', withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-  } else {
+  // if (!req.session.loggedIn) {
+  //   res.redirect('/login');
+  // } else {
     // If the user is logged in, allow them to view the gallery
     try {
       const dbGalleryData = await Gallery.findByPk(req.params.id, {
@@ -63,11 +64,11 @@ router.get('/gallery/:id', async (req, res) => {
 
 // GET one painting
 // TODO: Replace the logic below with the custom middleware
-router.get('/painting/:id', async (req, res) => {
+router.get('/painting/:id', withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-  } else {
+  // if (!req.session.loggedIn) {
+  //   res.redirect('/login');
+  // } else {
     // If the user is logged in, allow them to view the painting
     try {
       const dbPaintingData = await Painting.findByPk(req.params.id);
