@@ -8,6 +8,7 @@ const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 
 // TODO: Add a comment describing the functionality of this expression
+// this is the pakage that we bring in and use to connect sequelize and the the express session
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -16,6 +17,7 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 // TODO: Add a comment describing the functionality of this object
+// This is where we link the session object to the sequelize store
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -27,6 +29,7 @@ const sess = {
 };
 
 // TODO: Add a comment describing the functionality of this statement
+// tells express to use the session middleware
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
