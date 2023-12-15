@@ -9,14 +9,14 @@ function binarySearch(array, element) {
     let mid = Math.floor((start + end) / 2);
 
     if (array[mid] === element) {
-      return;
+      return mid;
     } else if (array[mid] < element) {
       start = mid + 1;
     } else {
       end = mid - 1;
     }
   }
-  return;
+  return -1;
 }
 
 console.log(binarySearch(arr, 7));

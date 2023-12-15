@@ -7,7 +7,11 @@ for (let i = 0; i < 2000; i++) {
 }
 
 // TODO: create bubble sort function
-const bubbleSort = (array) => {};
+const bubbleSort = (array) => {
+  let sorted = true;
+  
+
+};
 
 const sorted = bubbleSort(unsortedInputArray);
 console.log('Post Sort:', sorted.join(' '));
