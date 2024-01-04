@@ -3,7 +3,7 @@ const { Post } = require('../models');
 module.exports = {
   async getPosts(req, res) {
     try {
-      const posts = await Post.find();
+      const posts = await Post.find().populate({path:'tags',selsct:'-__v'});
       res.json(posts);
     } catch (err) {
       console.error({ message: err });
