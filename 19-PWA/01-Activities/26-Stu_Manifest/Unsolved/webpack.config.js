@@ -22,6 +22,24 @@ module.exports = () => {
       new GenerateSW(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
+          short_name: "Manifest",
+          name: "TODOs Manifest",
+          icons: [
+            {
+              "src": path.resolve("./assets/images/logo.png"),
+              "type": "image/png",
+              "sizes": "750x750",
+              "purpose": "any maskable"
+            }
+          ],
+          orientation: "portrait",
+          display: "standalone",
+          start_url: "./",
+          publicPath: "./",
+          description: "Keep track of important tasks!",
+          background_color: "#7eb4e2",
+          theme_color: "#7eb4e2"
+        
       }),
      
     ],
