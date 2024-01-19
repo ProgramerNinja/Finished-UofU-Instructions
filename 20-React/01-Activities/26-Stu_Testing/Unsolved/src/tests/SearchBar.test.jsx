@@ -7,11 +7,11 @@ describe('SearchBar', () => {
   it('should render and match snapshot', () => {
     act(() => {
       // Render the component
-      render(<SearchBar />, container);
+      render(<SearchBar />);
     });
 
     // Format the rendered output
-    const html = pretty(container.innerHTML);
+    const html = pretty(document.querySelector(".search.b-r".outerHTML));
 
     // Verify the output
     expect(html).toMatchSnapshot();

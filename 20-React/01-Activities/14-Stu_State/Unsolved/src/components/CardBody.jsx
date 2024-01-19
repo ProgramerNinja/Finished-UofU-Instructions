@@ -1,4 +1,5 @@
 // TODO: Add a comment explaining what is being passed to this "child" component as props
+// it is reciving both the count variable/state and the methods we made to modify it
 
 function CardBody(props) {
   return (

@@ -1,6 +1,7 @@
 import pretty from 'pretty';
 import { render } from '@testing-library/react';
 // TODO: Import the IssueList component
+import IssueList from '../components/IssueList';
 
 const issues = [
   {
@@ -28,6 +29,10 @@ describe('IssueList', () => {
     render(<IssueList issues={issues} />);
 
     // TODO: Format the rendered HTML with the pretty package
+    const html = pretty(document.querySelector('.item').textContent).tobe(
+      'Git: Support git history in VSCode'
+    );
+
 
     // TODO: Expect the rendered component to match the snapshot
   });

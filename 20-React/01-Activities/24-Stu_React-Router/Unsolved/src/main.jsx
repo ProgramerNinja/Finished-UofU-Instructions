@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 // Todo: Bring in the appropriate imports
-import { } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider }  from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -14,6 +14,27 @@ import AboutPage from './pages/AboutPage';
 
 const router = createBrowserRouter([
   // Todo: Define the accessible routes, and which components respond to which URL
+  {
+    path:'/',
+    elemment: <App />,
+    errorElement: <ErrorPage />,
+
+    children: [
+      {
+        index: true,
+        element: <HomePage />
+      },
+      {
+        path: '/About',
+        element: <AboutPage />,
+      },
+      {
+        path: '/Profile/:id',
+        element: <ProfilePage />,
+      }
+    ]
+  }
+
 ]);
 
 // Render the RouterProvider component

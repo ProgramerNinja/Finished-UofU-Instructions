@@ -1,5 +1,5 @@
 // TODO: Add a comment explaining how we are able to extract the key value pairs from props
-
+//we descrucced these so we can access them easier
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
@@ -8,7 +8,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           href="#home"
           onClick={() => handlePageChange('Home')}
           //*  TODO: BONUS: Add a comment explaining what kind of operator this is and what it is checking for
-
+          // turinary operator that dipicts which page we are on and set a active or not active class
           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
         >
           Home
