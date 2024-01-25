@@ -20,6 +20,7 @@ const resolvers = {
 
   Mutation: {
     // TODO: Add comments to each line of code below to describe the functionality below
+    // we are creating a user using the args that were passed to the method then creating a token using the sign token function, then returning both the user and it's token
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
@@ -27,6 +28,7 @@ const resolvers = {
       return { token, user };
     },
     // TODO: Add comments to each line of code below to describe the functionality below
+    // we pull in the email and password that were provided and finding a user with that email, once we do, we check if the password provided matches the password stored, if all of that achecks out, we crete a new token and pass t back with the user
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

@@ -9,19 +9,19 @@ const CommentForm = ({ thoughtId }) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
-  const { addComment, loading, error } = useMutation(ADD_COMMENT, {
-    variables: { thoughtId, commentText },
-    refetchQueries: [
-      QUERY_THOUGHTS,
-      'getThoughts'
-    ]
-  });
+  const [ addComment,{ error } ] = useMutation(ADD_COMMENT);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const { data } = await addComment();
+      const { data } = await addComment({
+        variables: { thoughtId, commentText },
+        refetchQueries: [
+          QUERY_THOUGHTS,
+          'getThoughts'
+        ]
+      });
 
       setCommentText('');
       setCharacterCount(0);

@@ -13,6 +13,7 @@ const ThoughtForm = () => {
 
   // Set up our mutation with an option to handle errors
   // TODO: Add comment describing the functionality of the useMutation second argument & refetchQueries property
+  // sets up the addThought to use useMutation with the ADD_THOUGHT that was imported earlier and them requery allprofiles after being ran
   const [addThought, { error }] = useMutation
   (ADD_THOUGHT, {
     refetchQueries: [
@@ -25,13 +26,14 @@ const ThoughtForm = () => {
     event.preventDefault();
 
     // On form submit, perform mutation and pass in form data object as arguments
-    // It is important that the object fields are match the defined parameters in `ADD_THOUGHT` mutation
+    // It is important that the object fields match the defined parameters in `ADD_THOUGHT` mutation
     try {
       const { data } = addThought({
         variables: { ...formState },
       });
 
       // TODO: Add a comment describing why we no longer need to reload the page
+      // We don't need to reload the page because after the mutation was called, we requeried the all the thoughts and set the form to be empty
       setCharacterCount(0);
       setFormState({
         thoughtText: '',
