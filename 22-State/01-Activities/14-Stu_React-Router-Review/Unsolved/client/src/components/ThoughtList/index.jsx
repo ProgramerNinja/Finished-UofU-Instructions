@@ -1,4 +1,4 @@
-// TODO: Add code to import necessary component for creating internal hyperlinks
+import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
@@ -20,7 +20,12 @@ const ThoughtList = ({ thoughts, title }) => {
             <div className="card-body bg-light p-2">
               <p>{thought.thoughtText}</p>
             </div>
-            {/* TODO: Add code to create a link to this thought's single thought page at `/thoughts/<id>` */}
+            <Link
+                  className="btn btn-block btn-squared btn-light text-dark"
+                  to={`/thoughts/${thought._id}`}
+                >
+                  View and endorse their skills.
+                </Link>
           </div>
         ))}
     </div>

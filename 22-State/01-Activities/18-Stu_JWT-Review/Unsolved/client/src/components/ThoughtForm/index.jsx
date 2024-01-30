@@ -28,7 +28,7 @@ const ThoughtForm = () => {
       const { data } = await addThought({
         variables: {
           thoughtText,
-          thoughtAuthor: // TODO: Display the user's username
+          thoughtAuthor: data.name // TODO: Display the user's username
         },
       });
 
