@@ -11,6 +11,7 @@ import './style.css';
 
 // TODO: Add a comment describing the functionality of loadStripe
 // Your comment here
+// Sets up our method to load our stripe obejctc at every render
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
@@ -19,6 +20,7 @@ const Cart = () => {
 
   // TODO: Add a comment describing the functionality of the useEffect hook in this instance
   // Your comment here
+  //Everytime the data state changes it will render stripe and redirect to checkout
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -29,6 +31,8 @@ const Cart = () => {
 
   // TODO: Add a comment describing what data we are watching and what work should be preformed if that data changes
   // Your comment here
+  // Every time an item is added or removed from the cart, it finds all items in the cart and updates the state,
+  // then it toggles the card and creates a new total
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -53,7 +57,8 @@ const Cart = () => {
   }
 
   // TODO: Add a comment describing the functionality of our submitCheckout function.
-  // Your comment here
+  // Sets up the function that will get called when the Checkout button is clicked,
+  //it runs the get checkout and passes the cart items to it
   function submitCheckout() {
     getCheckout({
       variables: { 
